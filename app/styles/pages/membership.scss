@@ -1,0 +1,27 @@
+.membership{
+
+  p{
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 28px;
+  }
+
+  .content-block{
+    background-color: #fff;
+    margin-top: 0.5rem;
+    padding: 1rem 0.5rem;
+
+    h3{
+      color: #ec5252;
+    }
+  }
+
+  .btn-apply{
+    width: 95%;
+    margin: 0 auto;
+
+    .button{
+      border-radius: 0.9rem;
+    }
+  }
+}

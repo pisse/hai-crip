@@ -1,0 +1,131 @@
+.center{
+  .page, .page-group{
+    /* background: #fff;*/
+  }
+
+  .my-id-pic {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .my-info {
+    margin: 0 15px 15px 15px;
+    position: relative;
+    padding-top: 15px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .my-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4em;
+    border: .125em solid #bca1ad;
+    box-shadow: inset 0 1px 8px rgba(0,0,0,0.2);
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .my-person-info {
+    display: inline-block;
+    vertical-align: middle;
+
+    .my-jd-head-name {
+      font-size: 17px;
+      line-height: 17px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .my-jd-head-type {
+      font-size: 13px;
+      line-height: 13px;
+      color: #b9b9b9;
+    }
+  }
+
+  .center-wrap{
+    position: relative;
+    z-index: 13;
+    background: #fff;
+    /*border-top: 1px solid #efefef;*/
+  }
+
+  .home-order-status {
+    margin-bottom: 10px;
+    overflow: hidden;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 0px 5px rgba(30, 34, 36, .2), 0 2px 5px rgba(30, 34, 36, .2);
+
+    li {
+      float: left;
+      position: relative;
+      width: 20%;
+      padding: 5px 0;
+      text-align: center;
+      font-size: 13px;
+
+      &::after{
+        display: block;
+        content: "";
+        width: 1px;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        bottom: 15px;
+        background: #e8e8e8
+      }
+
+      &:first-child{
+        &::after{
+          display: none;
+        }
+      }
+
+      i{
+        position: relative;
+        display: block;
+        margin: 0 auto 0;
+      }
+    }
+
+    .i-waitpay,.i-signsuccess,.i-queue,.i-cashcredits,.i-travelcredits{
+      width: 28px;
+      height: 28px;
+    }
+    .i-waitpay{
+      background: url(../../images/i-wait.png) 0 0 no-repeat;
+      background-size: 28px;
+    }
+    .i-signsuccess{
+      background: url(../../images/i-success.png) 0 0 no-repeat;
+      background-size: 28px;
+    }
+    .i-queue{
+      background: url(../../images/i-queue.png) 0 0 no-repeat;
+      background-size: 28px;
+    }
+    .i-cashcredits, .i-travelcredits{
+      color: #ef6969;
+      font-style: normal;
+    }
+  }
+
+  .content-list{
+    background-color: #fff;
+
+    a{
+      color:#333;
+    }
+  }
+
+}

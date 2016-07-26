@@ -1,0 +1,47 @@
+//|**
+//|
+//| gulp require
+//|
+//| This file is the main stylesheet theme
+//|
+//| .--------------------------------------------------------------.
+//| | NAMING CONVENTIONS:                                          |
+//| |--------------------------------------------------------------|
+//| | Modules/Blocks and variables    | compound-words             |
+//| |--------------------------------------------------------------|
+//| | Components/Elements             | __double-underscore-prefix |
+//| |--------------------------------------------------------------|
+//| | Modifiers                       | --double-hyphen-prefix     |
+//| '--------------------------------------------------------------'
+//|
+//'*/
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+@import "../scripts/vendor/bourbon/app/assets/stylesheets/_bourbon.scss";
+// endbower
+
+@import "base";
+@import "states";
+@import "layout";
+@import "modules";
+
+@import "pages";
+
+//
+// hero unit
+//
+
+$titleColor:rgb(255,210,0);
+$featColor:rgb(212,0,0);
+@mixin centralize($top:0, $right:0, $bottom:0, $left:0, $margin:auto) {
+	position: absolute;
+	margin: #{$margin};
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}

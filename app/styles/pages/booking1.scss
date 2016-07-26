@@ -1,0 +1,21 @@
+.booking1{
+
+  p{
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 28px;
+  }
+
+  .cost{
+    font-size: 0.65rem;
+    span:first-child{
+      padding-right: 10px;
+    }
+  }
+
+  .next{
+    background-color: #008cff;
+    color: #fff;
+    padding: 0 15px;
+  }
+}

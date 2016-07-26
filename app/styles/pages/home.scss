@@ -1,0 +1,153 @@
+.home{
+  .page, .page-group{
+    /* background: #fff;*/
+  }
+
+  .bar-tab::before{
+    background-color: #018ffd;
+  }
+
+  /*
+  * =========================================
+  * 首页搜索框
+  * =========================================
+  */
+  .bar-header-secondary{top:0.2rem;}
+  .searchbar, .bar{background-color: initial;}
+  .bar::after{
+    background-color: inherit;
+  }
+
+  .bar .searchbar .search-input input{
+    border:1px solid #fff;
+  }
+
+  .search-input label+input{
+    padding-left: 0.8rem;
+  }
+  .searchbar .searchbar-cancel {
+    color: #fff
+  }
+  .search-input input{
+    background-color:inherit;
+    border-radius: .8rem;
+    color: #fff;
+
+    @include placeholder {
+      color: #fff;
+    }
+  }
+  .search-input .icon{
+    left: inherit;
+    right: 0.3rem;
+    color: #fff;
+  }
+
+  /*
+  * =========================================
+  * 首页菜单
+  * =========================================
+  */
+  .categoryList {
+    padding-top: 10px;
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+
+    @include clearfix;
+  }
+
+  .categoryList .categoryImg {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px
+  }
+
+  .categoryList .itemTop {
+    float: left;
+    width: 33%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .categoryList .categoryImg img {
+    width: 100%;
+    height: auto
+  }
+
+  .categoryList .categoryImg.img1 {
+    background-image: url(../images/icon-1.png)
+  }
+
+  .categoryList .categoryImg.img2 {
+    background-image: url(../images/icon-2.png)
+  }
+
+  .categoryList .categoryImg.img3 {
+    background-image: url(../images/icon-3.png)
+  }
+
+  .categoryList .categoryImg.img4 {
+    background-image: url(../images/icon-4.png)
+  }
+
+  .categoryList .categoryImg.img5 {
+    background-image: url(../images/icon-5.png)
+  }
+
+  .categoryList .categoryImg.img6 {
+    background-image: url(../images/icon-6.png)
+  }
+
+  /*
+ * =========================================
+ * 首页路线列表
+ * =========================================
+ */
+  .bournBox{
+    background-color: #fff;
+
+    .bournData{
+      li{
+        padding: 0.3rem 0.5rem;
+      }
+
+      .bournImg{
+        height: 180px;
+        margin-top: 5px;
+
+        img{
+          position: relative;
+          z-index: 10;
+          width: 100%;
+          display: block;
+        }
+      }
+      .bournText{
+        color: #4e4e4e;
+        font-size: 14px;
+
+        p{
+          margin: 2px;
+        }
+      }
+
+      .bournDes{
+        font-size: 12px;
+        color: #bbb;
+      }
+
+      .ziyou{
+
+      }
+      .shendu{
+
+      }
+    }
+  }
+
+
+}

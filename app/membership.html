@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"><![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <title>gulp require</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/theme.css -->
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+
+    <!-- endbuild -->
+    <!-- build:js scripts/header.js -->
+    <!--<script src="scripts/vendor/modernizr/modernizr.js"></script>-->
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="page-group membership">
+    <div class="page current">
+
+        <header class="bar bar-nav">
+            <button class="button button-link button-nav pull-left">
+                <span class="icon icon-left"></span>
+            </button>
+            <button class="button button-link button-nav pull-right">
+                退出主页
+            </button>
+            <h1 class="title">俱乐部会员申请</h1>
+        </header>
+
+
+        <div class="content">
+            <div class="buttons-tab">
+                <a href="#tab1" class="tab-link active button">VIP会员（事业型）</a>
+                <a href="#tab2" class="tab-link button">铁杆会员（消费型）</a>
+            </div>
+
+            <div class="content-block">
+                <div class="tabs">
+                    <div id="tab1" class="tab active">
+                        <h3>会员费：1200元</h3>
+                        <div class="member-content">
+                            <p>1、返1300旅游积分，积分可以直接抵扣长线旅游中的现金和购物；</p>
+                            <p>2、获得俱乐部会员招募资格，成为俱乐部会员合伙人；</p>
+                            <p>3、获得俱乐部所有旅行线路的代理权，挣取现金积分，现金积分可以提现；</p>
+                            <p>4、为终身会员，不受时间限制；</p>
+                            <p>5、会员可以用成本价购买户外旅行装备；</p>
+                            <p>6、免费参加俱乐部组织的线上分享会活动；</p>
+                            <p>7、不定期享受会员的其他福利；</p>
+
+                        </div>
+
+                    </div>
+                    <div id="tab2" class="tab">
+                        <h3>会员费：300元</h3>
+                        <div class="member-content">
+                            <p>1、返300旅游积分，积分可以直接抵扣长线旅游中的现金和购物；</p>
+                            <p>2、获得俱乐部所有旅行线路的代理权，挣取现金积分，现金积分可以提现；</p>
+                            <p>3、为终身会员，不受时间限制；</p>
+                            <p>4、会员可以用成本价购买户外旅行装备；</p>
+                            <p>5、免费参加俱乐部组织的线上分享会活动；</p>
+                            <p>6、不定期享受会员的其他福利；</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="btn-apply"><a href="#" class="button button-fill button-big">立即申请 </a></p>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+<script src="scripts/config.js"></script>
+
+<!-- build:js scripts/body.js -->
+<script src="scripts/vendor/requirejs/require.js" data-main="scripts/application/pages/membership"></script>
+<!-- endbuild -->
+</body>
+</html>

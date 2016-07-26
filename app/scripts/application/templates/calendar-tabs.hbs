@@ -1,0 +1,13 @@
+<section class="calendar-tab">
+    <ul class="tabs">
+        {{#each datas}}
+            <li class="tab" data-key="{{@key}}" style="width: {{../width}}">
+                <div class="wrap thin-border">
+                    {{month}}月<em><span class="small">¥</span>{{price}}</em><span class="end small">起</span>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</section>
+
+

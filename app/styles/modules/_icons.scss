@@ -1,0 +1,176 @@
+@font-face {font-family: "iconfont";
+  src: url('../../font/iconfont.eot?t=1469154832'); /* IE9*/
+  src: url('../../font/iconfont.eot?t=1469154832#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../font/iconfont.woff?t=1469154832') format('woff'), /* chrome, firefox */
+  url('../../font/iconfont.ttf?t=1469154832') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../font/iconfont.svg?t=1469154832#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-applyqinggou:before { content: "\e635"; }
+.icon-catering:before { content: "\e61b"; }
+.icon-zhusu:before { content: "\e644"; }
+
+
+
+.btn_link a{
+  position: relative;
+  display: block;
+  padding-left: 58px;
+  height: 59px;
+  line-height: 60px;
+  text-align: left;
+  font-size: 15px;
+  border-width: 0;
+  border-bottom: 1px solid #eee;
+ /* -webkit-border-image: url("../component/img/icon_border_half.png?v=20160712_15_35") 2 stretch;
+  border-image: url("../component/img/icon_border_half.png?v=20160712_15_35") 2 stretch;*/
+
+  &::before{
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    width: 32px;
+    height: 32px;
+    /* background-size: 30px; */
+    content: "";
+  }
+
+  &.i-order::before{
+    background: url("../../images/i-order.png") no-repeat top left;
+    background-size: 30px;
+  }
+  &.i-retail::before{
+    background: url("../../images/i-retail.png") no-repeat top left;
+    background-size: 30px;
+  }
+  &.i-money::before{
+    background: url("../../images/i-money.png") no-repeat top left;
+    background-size: 30px;
+  }
+  &.i-code::before{
+    background: url("../../images/i-code.png") no-repeat top left;
+    background-size: 30px;
+  }
+  &.i-fav::before{
+    background: url("../../images/i-fav.png") no-repeat top left;
+    background-size: 30px;
+  }
+  &.i-msg::before{
+    background: url("../../images/i-msg.png") no-repeat top left;
+    background-size: 30px;
+  }
+  &.i-private::before{
+    background: url("../../images/i-private.png") no-repeat top left;
+    background-size: 30px;
+  }
+  &.i-setting::before{
+    background: url("../../images/i-setting.png") no-repeat top left;
+    background-size: 30px;
+  }
+
+  &::after{
+    position: absolute;
+    right: 15px;
+    top: 29px;
+    margin-top: -3.5px;
+    display: inline-block;
+    border-bottom: 2px solid #c0c0c0;
+    border-left: 2px solid #c0c0c0;
+    width: 7px;
+    height: 7px;
+    content: '';
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+  span{
+    position: absolute;
+    right: 30px;
+    color: #999999;
+  }
+}
+
+.tab_link a{
+  position: relative;
+  display: block;
+  padding-left: 50px;
+  height: 49px;
+  line-height: 50px;
+  text-align: left;
+  font-size: 15px;
+  border-width: 0;
+  border-bottom: 1px solid #eee;
+  /* -webkit-border-image: url("../component/img/icon_border_half.png?v=20160712_15_35") 2 stretch;
+   border-image: url("../component/img/icon_border_half.png?v=20160712_15_35") 2 stretch;*/
+
+  &::before{
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    width: 32px;
+    height: 32px;
+    /* background-size: 30px; */
+    content: "";
+    background-image: url("../../images/detail_notice.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+  }
+
+  &.i-notice-route::before{
+    background-position: 3px 7px;
+  }
+  &.i-notice-active::before{
+    background-position:3px -43px;
+  }
+  &.i-notice-apply::before{
+    background-position: 3px -97px;
+  }
+  &.i-notice-start::before{
+    background-position: 2px -149px;
+  }
+  &.i-notice-cost::before{
+    background-position: 2px -201px;
+  }
+  &.i-notice-warn::before{
+    background-position: 2px -254px;
+  }
+  &.i-notice-remind::before{
+    background-position: 2px -307px;
+  }
+
+  &::after{
+    position: absolute;
+    right: 15px;
+    top: 24px;
+    margin-top: -3.5px;
+    display: inline-block;
+    border-bottom: 2px solid #c0c0c0;
+    border-left: 2px solid #c0c0c0;
+    width: 7px;
+    height: 7px;
+    content: '';
+    @include transform(rotate(-135deg));
+  }
+
+  &.down_arrow{
+    border-bottom: 0;
+    &::after{
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  span{
+    position: absolute;
+    right: 30px;
+    color: #999999;
+  }
+}
+

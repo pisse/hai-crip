@@ -1,0 +1,57 @@
+.swipeBox {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px #ededed solid;
+
+  .s-nav {
+    margin-top: -25px;
+    margin-bottom: 0px;
+    z-index: 10;
+    position: relative
+  }
+
+  #position {
+    text-align: right;
+    list-style: none;
+    padding-right: 1em;
+
+    li {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 6px;
+      background: rgba(79,79,79,0.8);
+      margin: 0 2px;
+      cursor: pointer;
+
+      &.hover{
+        background-color: #fff
+      }
+    }
+  }
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  img {
+    width: 100%;
+    display: block
+  }
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 160px;
+
+  .s-item {
+    float: left;
+    width: 100%;
+    position: relative
+  }
+}
