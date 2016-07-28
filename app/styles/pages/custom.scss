@@ -1,0 +1,32 @@
+
+
+.custom{
+
+  p{
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 28px;
+  }
+
+  .content-block{
+    background-color: #fff;
+    margin-top: 0.5rem;
+
+    h4{
+      padding: 1rem 0;
+      color: #ec5252;;
+      font-size: 0.75rem;
+    }
+  }
+
+
+
+  .btn-apply{
+    width: 95%;
+    margin: 0 auto;
+
+    .button{
+      border-radius: 0.9rem;
+    }
+  }
+}

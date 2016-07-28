@@ -1,0 +1,35 @@
+
+
+.apply{
+
+  p{
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 28px;
+  }
+
+  .content-block{
+    background-color: #fff;
+    margin-top: 0.5rem;
+  }
+
+  .cost_tips{
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    span{
+      &:first-child{
+        margin-right: 0.5rem;
+      }
+    }
+
+  }
+
+  .btn-apply{
+    width: 95%;
+    margin: 0 auto;
+
+    .button{
+      border-radius: 0.9rem;
+    }
+  }
+}

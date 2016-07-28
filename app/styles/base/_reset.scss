@@ -34,3 +34,62 @@ h1,h2,h3,h4,h5,h6{
 .title{
   color: #fff;
 }
+.card-header{
+  font-size: 0.55rem;
+}
+.list-block{
+  font-size: 0.65rem;
+}
+.buttons-tab .button{
+  font-size: 0.7rem;
+}
+
+/*
+* hide
+*/
+
+.hidden {
+  display: none !important
+}
+
+/*
+* list
+*/
+.v_list li {
+  line-height: 45px;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e2e2;
+  overflow: hidden;
+  position: relative;
+}
+
+.v_contact_hd {
+  position: relative;
+  float: left;
+  width: 85px;
+  /*font: normal 15px/45px Arial,"Lucida Grande",Verdana,"Microsoft YaHei",hei*/
+}
+
+.v_contact_hd .required {
+  float: right;
+  line-height: 50px;
+  font-size: 14px;
+  color: #ff4a46;
+  margin-right: 5px;
+  margin-left: -85px
+}
+
+.v_contact_input {
+  min-height: 45px;
+  overflow: hidden
+}
+.v_input_text {
+  padding: 0;
+  height: 45px;
+  line-height: normal;
+  width: 100%;
+  background: transparent;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}

@@ -1,9 +1,14 @@
 .booking1{
+  font-size: 0.5rem;
 
   p{
     margin: 0;
     font-size: 0.65rem;
     line-height: 28px;
+  }
+
+  .fl{
+    float: left;
   }
 
   .cost{
@@ -17,5 +22,93 @@
     background-color: #008cff;
     color: #fff;
     padding: 0 15px;
+  }
+
+  .calendar-tabs .row{
+    margin-left: inherit;
+    font-size: 0.65rem;
+
+    &>.col-15{
+      text-align: center;
+      border: 1px solid #e2e2e2;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+  }
+
+  .calendar-content{
+    margin-top: 0.5rem;
+  }
+
+  .calendar-info{
+    line-height: 44px;
+    height: 44px;
+    background-color: #fff;
+    margin-top: 0.5rem;
+    padding: 0 15px;
+    font-size: 0.7rem;
+  }
+
+  .set_num{
+    background-color: #fff;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+
+    @include clearfix;
+
+    .person_num,.route_price_box {height: 26px;line-height: 26px;}
+    .person_num{
+      margin-right: 0.2rem;
+    }
+    .route_price_box{
+      margin-left: 1rem;
+
+      .route_price{
+        color: #ef6969;
+      }
+    }
+
+    .number-chooser {
+      border-radius: 2px;
+      overflow: hidden;
+      vertical-align: middle
+    }
+
+    .number-chooser>.operate-btn {
+      background-color: #fff;
+   /*   color: #fff;*/
+      font-size: 20px;
+      height: 26px;
+      line-height: 26px;
+      width: 26px;
+      text-align: center;
+      float: left;
+      cursor: pointer;
+      border: 1px solid #e2e2e2;
+    }
+
+    .number-chooser>.operate-btn.disabled {
+      background-color: #ccc;
+      cursor: default
+    }
+
+    .number-chooser>.number-input {
+      box-sizing: border-box;
+      float: left;
+      width: 30px;
+      height: 26px;
+      line-height: 26px;
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      border: none;
+      border-radius: 0;
+      background: #018ffd
+    }
+
+    .number-chooser.disabled>.operate-btn {
+      background-color: #ccc;
+      cursor: default
+    }
   }
 }

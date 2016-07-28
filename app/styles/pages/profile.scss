@@ -1,0 +1,200 @@
+.profile{
+  .page, .page-group{
+    /* background: #fff;*/
+  }
+
+  .i-arrow,.i-arrow:after {
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: #999;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+
+  .i-arrow {
+    top: 50%;
+    right: 10px;
+    margin-top: -3px
+  }
+
+  .i-arrow:after {
+    content: "";
+    top: 3px;
+    left: 3px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+
+  .info-list {
+    background-color: #fff;
+    margin: 7px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 1px rgba(30,34,36,.1);
+    box-shadow: 0 2px 1px rgba(30,34,36,.1)
+  }
+
+  .info-list li {
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    font-size: 15px;
+    border-top: 1px solid #e8e8e8;
+    color: #666;
+    padding-left: 15px
+  }
+
+  .info-list li:first-child {
+    border-top: 0 none
+  }
+
+  .info-list li>span {
+    position: absolute;
+    top: 0;
+    right: 26px;
+    text-align: right;
+    color: #333
+  }
+
+  .info-list li .placeholder {
+    color: #ccc!important
+  }
+
+  .info-list li>.placeholder {
+    font-size: 13px
+  }
+
+  .info-list li .level i {
+    margin-right: 6px;
+    vertical-align: -3px
+  }
+
+  .info-list .li-prompt {
+    background-color: #fff9e6
+  }
+
+  .info-list .li-menber-upgrade {
+    border-top: 0 none;
+    height: 38px;
+    line-height: 38px;
+    font-size: 12px
+  }
+
+  .info-list .li-menber-upgrade button {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    width: 60px;
+    height: 24px;
+    background-color: #52bce8;
+    border-radius: 3px;
+    color: #fff
+  }
+
+  .info-list .li-menber-upgrade .text-r {
+    right: 90px;
+    top: 1px;
+    color: #666
+  }
+
+  .info-list .li-hd {
+    height: 80px;
+    line-height: normal
+  }
+
+  .info-list .li-hd .avatar,.info-list .li-hd .avatar img {
+    width: 60px;
+    height: 60px;
+    overflow: hidden
+  }
+
+  .info-list .li-hd .avatar {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: url(//pic.c-ctrip.com/h5/rwd_myctrip/v6.7/portrain_unlogin@2x.png) no-repeat -1px -1px;
+    -webkit-background-size: 60px auto;
+    background-size: 60px auto;
+    float: left;
+    margin-top: 10px
+  }
+
+  .info-list .li-hd .avatar img {
+    margin-top: -1px;
+    margin-left: -1px;
+    vertical-align: top
+  }
+
+  .info-list .li-hd>span {
+    top: 50%;
+    margin-top: -10px;
+    display: none
+  }
+
+  .info-list .li-hd>span.placeholder {
+    display: block
+  }
+
+  .info-list .li-hd .info {
+    float: left;
+    margin-top: 18px;
+    margin-left: 15px;
+    max-width: 65%
+  }
+
+  .info-list .li-hd .name {
+    display: block;
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
+
+  .info-list .li-hd .sex,.info-list .li-hd .age {
+    font-size: 12px;
+    color: #999;
+    margin-right: 3px
+  }
+
+  .info-list .li-hd .sex.placeholder,.info-list .li-hd .age.placeholder {
+    display: none
+  }
+
+  .info-list .li-hd .sex.placeholder+.age.placeholder {
+    display: block
+  }
+
+
+  .info-form {
+    margin: 10px 0;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #fff
+  }
+
+  .info-form>li {
+    position: relative;
+    height: 44px;
+    padding: 0 20px 0 10px;
+    line-height: 44px
+  }
+
+  .info-form>li>input {
+    color: #666;
+    border: 0;
+  }
+
+  .info-note {
+    padding: 0 15px;
+    font-size: 12px;
+    color: #666
+  }
+
+}

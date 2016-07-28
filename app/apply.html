@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"><![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <title>gulp require</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/theme.css -->
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+
+    <!-- endbuild -->
+    <!-- build:js scripts/header.js -->
+    <!--<script src="scripts/vendor/modernizr/modernizr.js"></script>-->
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="page-group apply">
+    <div class="page current">
+
+        <header class="bar bar-nav">
+            <button class="button button-link button-nav pull-left">
+                <span class="icon icon-left"></span>
+            </button>
+            <button class="button button-link button-nav pull-right">
+                返回主页
+            </button>
+            <h1 class="title">立即申请</h1>
+        </header>
+
+
+        <div class="content">
+
+            <div class="content-block">
+                <ul class="v_list">
+                    <li>
+                        <h3 class="v_contact_hd">会员姓名<i class="required">*</i></h3>
+                        <div class="v_contact_input clear-input-box">
+                            <input type="text" class="v_input_text contactInput contact_name nofastclick" placeholder="输入您的姓名" id="contact_name">
+                            <a class="pkg-clear-input" href="javascript:;" style="display: none;"><span></span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="v_contact_hd">手机号码<i class="required">*</i></h3>
+                        <div class="v_contact_input clear-input-box">
+                            <input type="text" class="v_input_text contactInput contact_name nofastclick" placeholder="输入您的手机号码" id="contact_name">
+                            <a class="pkg-clear-input" href="javascript:;" style="display: none;"><span></span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="v_contact_hd">微信号码<i class="required">*</i></h3>
+                        <div class="v_contact_input clear-input-box">
+                            <input type="text" class="v_input_text contactInput contact_name nofastclick" placeholder="输入您的微信号码" id="contact_name">
+                            <a class="pkg-clear-input" href="javascript:;" style="display: none;"><span></span></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="content-block cost_tips">
+                <span>会员费用</span> <span>1200元</span>
+            </div>
+
+            <p class="btn-apply"><a href="#" class="button button-fill button-big">立即申请 </a></p>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+<script src="scripts/config.js"></script>
+
+<!-- build:js scripts/body.js -->
+<script src="scripts/vendor/requirejs/require.js" data-main="scripts/application/pages/apply"></script>
+<!-- endbuild -->
+</body>
+</html>

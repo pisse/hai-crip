@@ -1,0 +1,149 @@
+.booking2{
+  font-size: 0.5rem;
+
+  p{
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 28px;
+  }
+
+  .fl{
+    float: left;
+  }
+  .fr{
+    float:right;
+  }
+
+  .num{
+    color: #ef6969;
+  }
+  .fixed_top {
+    position: fixed;
+    width: 100%;
+    bottom: auto;
+    top: 2.2rem;
+    border-top-width: 0;
+    z-index: 10;
+    padding: 0 0.5rem;
+    background-color: #fff;
+
+    .item{
+      float: left;
+      height: 2rem;
+      line-height: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    .price{
+      color: #ef6969;
+    }
+  }
+
+  .route_info{
+    padding:0.5rem;
+    margin-top: 2.5rem;
+    background-color: #fff;
+
+    .route_title{
+      padding: 0 0 0.2rem;
+    }
+    .route_date{
+      padding-top:0.2rem;
+      border-top: 1px solid #e2e2e2;
+    }
+  }
+
+  .content-wrap{
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+  }
+
+  .cost_info {
+    @extend .content-wrap;
+    padding-bottom: 0;
+    .route_price_num {
+      @include clearfix;
+    }
+
+    h4 {
+      height: 1.3rem;
+      line-height: 1.3rem;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .cost_list {
+      padding-top: 0.3rem;
+
+      .cost_item{
+        padding: 0.2rem 0;
+        border-bottom: 1px solid #e2e2e2;
+        &:last-child{
+          border: 0;
+        }
+      }
+
+      .route_name{
+        position: relative;
+        line-height: 16px;
+        padding-right: 2rem;
+
+        .iconfont{
+          position: absolute;
+          right: 0;
+          top:0;
+        }
+      }
+
+      .price_unit {
+        margin-right: 1rem;
+      }
+    }
+
+  }
+
+  .credit_info{
+    @extend .content-wrap;
+
+    position: relative;
+
+    line-height: 26px;
+  }
+
+  .person_info{
+    @extend .content-wrap;
+
+    h4{
+      font-size: 0.7rem;
+      border-bottom: 1px solid #e2e2e2;
+    }
+    p{
+      font-size: 0.5rem;
+      line-height: 20px;
+    }
+    .person_item{
+      border-bottom: 1px solid #e2e2e2;
+      padding: 0.2rem 0;
+    }
+    .person_tips{
+      color: #c9c9c9;
+      padding: 0.2rem 0;
+    }
+  }
+
+  .person_add{
+    @extend .content-wrap;
+    text-align: center;
+  }
+
+  .btn-submit{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1rem;
+
+     .button {
+      border-radius: 0.9rem;
+    }
+  }
+
+}

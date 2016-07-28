@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"><![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <title>gulp require</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/theme.css -->
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+
+    <!-- endbuild -->
+    <!-- build:js scripts/header.js -->
+    <!--<script src="scripts/vendor/modernizr/modernizr.js"></script>-->
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="page-group profile">
+    <div class="page current">
+
+        <header class="bar bar-nav">
+            <button class="button button-link button-nav pull-left">
+                <span class="icon icon-left"></span>
+            </button>
+            <button class="button button-link button-nav pull-right">
+                退出登录
+            </button>
+            <h1 class="title">我的资料</h1>
+        </header>
+
+        <div class="content">
+
+            <div id="accountbox">
+                <ul class="info-list" style="">
+                    <li class="li-hd" data-href="/webapp/h5myinfo/accountsedit">
+                        <div class="avatar"><img id="headImg"
+                                                 src="//storage.jd.com/i.imageUpload/6368616e6465725f62666431343235383830343134363937_big.jpg">
+                        </div>
+                        <div class="info">
+                            <span id="disp_name" class="name">江海</span>
+                            <span id="disp_sgender" class="sex">男</span>
+                            <span id="disp_birthday" index="90,02,13" class="age">25</span>
+                        </div>
+                        <span id="hdPreson" class="placeholder">请完善下个人资料</span><i class="i-arrow"></i>
+                    </li>
+                    <li id="account_personinfo_phone">绑定手机<span id="disp_phone" class="">18600557240</span><i
+                            class="i-arrow"></i></li>
+                    <li data-href="/webapp/h5myinfo/editmail">邮箱<span id="disp_email"
+                                                                      class="">huanghuang240@163.com</span><i
+                            class="i-arrow"></i></li>
+                </ul>
+
+                <ul class="info-list" style="">
+                    <li data-href="/webapp/h5myinfo/editnickname">社区昵称
+                        <span id="disp_nickname" class="">华仔</span><i class="i-arrow"></i>
+                    </li>
+                    <li data-href="/webapp/h5myinfo/levelinfo">会员等级
+                        <span id="disp_level" class="level">
+                            <i class="i-level-normal"></i>
+                        </span>
+                        <i class="i-arrow"></i>
+                    </li>
+                    <li class="li-prompt li-menber-upgrade" style="display:none">
+                        <span class="text-r" id="disp_input"></span>
+                        <button id="btnUpGrade">立即升级</button>
+                    </li>
+                    <li id="liusermedal" umurl="http://m.ctrip.com/webapp/you/user/medals">荣誉勋章
+                        <span id="usermedalcount" class="placeholder">大把荣誉勋章等你收集</span><i class="i-arrow"></i>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="page" id='editnickname'>
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/router">
+                <span class="icon icon-left"></span>
+            </a>
+            <h1 class='title'>昵称</h1>
+            <button class="button button-link button-nav pull-right">
+                保存
+            </button>
+        </header>
+        <div class="content">
+            <div id="editnickname-view">
+                <ul class="info-form">
+                    <li class="clear-input-box"><input type="text" placeholder="昵称" id="nickname">
+                        <a class="clear-input " href="javascript:;" style="display: none;"><span></span></a>
+                        <span class="clear-input"><span></span></span>
+                    </li>
+                </ul>
+            </div>
+            <p class="info-note">4-30个字符，可由中英文字母、数字、"-"、"_"组成。</p>
+        </div>
+    </div>
+
+    <div class="page" id='editphone'>
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/router">
+                <span class="icon icon-left"></span>
+            </a>
+            <h1 class='title'>设置绑定手机</h1>
+            <button class="button button-link button-nav pull-right">
+                保存
+            </button>
+        </header>
+        <div class="content">
+            <div id="editphone-view">
+                <ul class="info-form">
+                    <li class="clear-input-box"><input type="tel" placeholder="手机号" id="phone-num">
+                        <a class="clear-input " href="javascript:;" style="display: none;"><span></span></a>
+                        <span class="clear-input"><span></span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+<script src="scripts/config.js"></script>
+
+<!-- build:js scripts/body.js -->
+<script src="scripts/vendor/requirejs/require.js" data-main="scripts/application/pages/profile"></script>
+<!-- endbuild -->
+</body>
+</html>

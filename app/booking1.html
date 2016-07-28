@@ -59,11 +59,47 @@
             </a>
         </nav>
 
+        <div class="content content-padded">
+            <div class="calendar-tabs">
+                <div class="row">
+                    <div class="col-30">月份/批次</div>
+                    <div class="col-15">7月</div>
+                    <div class="col-15">8月</div>
+                    <div class="col-15">9月</div>
+                    <div class="col-15">10月</div>
+                </div>
+            </div>
+
+            <div id="J_calendar-content" class="calendar-content">
+
+            </div>
+
+            <div class="calendar-info">
+                <span>可报名</span>
+                <span>非节假日批次</span>
+            </div>
+
+            <div class="set_num">
+                <div class="fl person_num">出行人数</div>
+                <div class="number-chooser J_number-choose fl" data-min="1" data-max="50" data-default="2" data-step="1">
+                    <span class="operate-btn minus">-</span>
+                    <input type="tel" disabled="" class="number-input" name="tourSumDay" value="2" maxlength="3">
+                    <span class="operate-btn plus">+</span>
+                </div>
+                <div class="route_price_box fl">
+                    <span>成人价：</span>
+                    <span class="route_price">
+                        ¥580
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
 
     </div>
 </div>
 
-<script src="http://webresource.c-ctrip.com/code/lizard/2.2/web/ui/ui.calendar.js"></script>
 
 <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>

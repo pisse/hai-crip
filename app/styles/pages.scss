@@ -3,9 +3,14 @@
  *  all your sass files automatically
  */
 // injector
+@import "./pages/apply.scss";
 @import "./pages/booking1.scss";
+@import "./pages/booking2.scss";
 @import "./pages/center.scss";
+@import "./pages/custom.scss";
 @import "./pages/detail.scss";
 @import "./pages/home.scss";
 @import "./pages/membership.scss";
+@import "./pages/orders.scss";
+@import "./pages/profile.scss";
 // endinjector
