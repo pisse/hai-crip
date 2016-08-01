@@ -30,9 +30,9 @@ gulp.task('watch', ["serve"], function() {
   });
 
   // Watch script files
-  $.watch( [_.app + '/scripts/**/*.js', '!' + _.app + '/scripts/vendor/**/*.js'] , function() {
+  /*$.watch( [_.app + '/scripts/!**!/!*.js', '!' + _.app + '/scripts/vendor/!**!/!*.js'] , function() {
     gulp.start('scripts');
-  });
+  });*/
 
   // Watch image files
   $.watch([_.app + '/images/**/*.{png,jpg,jpeg,gif,ico}'] , function() {

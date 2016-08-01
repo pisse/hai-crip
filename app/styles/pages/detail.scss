@@ -6,10 +6,6 @@
     line-height: 28px;
   }
 
-  .content-block{
-
-  }
-
   .icon-phone{
     @include transform(rotate(-90deg))
   }
@@ -66,11 +62,11 @@
   .detail_product_destination{
     background-color: #FFF;
     margin-top: 0.5rem;
-    @include box();
+    @include display(flex);
     border-bottom: 1px #ebebeb solid;
 
     .item {
-      @include box-flex(1);
+      @include flex(1);
       padding: 0.5em;
       width: 50%;
 
@@ -131,18 +127,7 @@
         -ms-box-sizing: border-box;
         box-sizing: border-box;
         font-size: 12px;
-
-        &::before{
-          content: "";
-          width: 200%;
-          height: 200%;
-          position: absolute;
-          border: 1px solid #e2e2e2;
-          left: 0;
-          top: 0;
-          @include transform(scale(0.5));
-          @include transform-origin(0 0);
-        }
+        border: 1px solid #e2e2e2;
       }
     }
 

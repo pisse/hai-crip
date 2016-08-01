@@ -1,10 +1,11 @@
 /* global define */
-define([
+require([
 	'../scope',
 	//'zepto',
 	'../views',
-	'swipe'
-], function (scope, Views, swipe) {
+	'swipe',
+	"../templates/templates","../templates/helper"
+], function (scope, Views, swipe, Template) {
 	'use strict';
 
 
@@ -19,7 +20,7 @@ define([
 			bullets[pos].className = "hover"
 		}
 	});
-	var bullets = document.getElementById("position").getElementsByTagName("li")
+	var bullets = document.getElementById("position").getElementsByTagName("li");
 
 
 	/*$(".content").scroller({

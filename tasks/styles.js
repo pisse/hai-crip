@@ -20,6 +20,10 @@ gulp.task('styles', ['inject-pages'], function() {
   return buildStyles();
 });
 
+gulp.task('styles-build', ['inject-pages'], function() {
+    return buildStyles(1);
+});
+
 gulp.task('inject-pages', function(){
 
   var injectFiles = gulp.src([
@@ -43,7 +47,7 @@ gulp.task('inject-pages', function(){
       .pipe(gulp.dest(path.join(conf.paths.src, '/styles/')));
 });
 
-var buildStyles = function() {
+var buildStyles = function(isBuild) {
   var sassOptions = {
     outputStyle: 'expanded',
     precision: 10
@@ -60,24 +64,42 @@ var buildStyles = function() {
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));*/
 
+    if(!isBuild){
 
-  return gulp.src(conf.paths.src + '/styles/theme.scss')
-      .pipe(wiredep(_.extend({}, conf.wiredep)))
+      return gulp.src(conf.paths.src + '/styles/theme.scss')
+          .pipe(wiredep(_.extend({}, conf.wiredep)))
 
-      //.pipe(gulp.dest(conf.paths.app + '/test/styles'))
+          .pipe($.sourcemaps.init())
+          .pipe($.sass(sassOptions).on('error', $.util.log))
+          .pipe($.plumber())
+          //.pipe($.autoprefixer())
+          //.pipe($.cssnano())
+          .pipe($.sourcemaps.write())
+          .pipe(gulp.dest(conf.paths.app + '/styles'))
+          .pipe($.size())
+          .pipe($.notify({
+            message: '<%= options.date %> ✓ styles: <%= file.relative %>',
+            templateOptions: {
+              date: new Date()
+            }
+          }));
+    } else {
+        return gulp.src(conf.paths.src + '/styles/theme.scss')
+            .pipe(wiredep(_.extend({}, conf.wiredep)))
 
-      .pipe($.sourcemaps.init())
-      .pipe($.sass(sassOptions).on('error', $.util.log))
-      .pipe($.plumber())
-      .pipe($.autoprefixer())
-      .pipe($.sourcemaps.write())
-      .pipe(gulp.dest(conf.paths.app + '/styles'))
-      .pipe($.size())
-      .pipe($.notify({
-        message: '<%= options.date %> ✓ styles: <%= file.relative %>',
-        templateOptions: {
-          date: new Date()
-        }
-      }));
+            .pipe($.sass(sassOptions).on('error', $.util.log))
+            .pipe($.plumber())
+            //.pipe($.autoprefixer())
+            .pipe($.cssnano())
+            .pipe(gulp.dest(conf.paths.dist + '/styles'))
+            .pipe($.size())
+            .pipe($.notify({
+                message: '<%= options.date %> ✓ styles: <%= file.relative %>',
+                templateOptions: {
+                    date: new Date()
+                }
+            }));
+
+    }
 
 };

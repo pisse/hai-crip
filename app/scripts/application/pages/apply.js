@@ -1,5 +1,5 @@
 /* global define */
-define([
+require([
 	'../scope',
 	//'zepto',
 	'../views',
@@ -7,5 +7,8 @@ define([
 ], function (scope, Views, swipe) {
 	'use strict';
 
+	console.log(scope);
+	console.log(Views);
+	console.log(swipe);
 	return scope;
 });

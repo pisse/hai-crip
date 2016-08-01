@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"><![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <title>gulp require</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/theme.css -->
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+
+    <!-- endbuild -->
+    <!-- build:js scripts/header.js -->
+    <!--<script src="scripts/vendor/modernizr/modernizr.js"></script>-->
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="page-group booking1">
+    <div class="page current">
+
+        <header class="bar bar-nav">
+            <button class="button button-link button-nav pull-left">
+                <span class="icon icon-left"></span>
+            </button>
+            <button class="button button-link button-nav pull-right">
+                <span class="icon icon-share"></span>
+            </button>
+            <h1 class="title">选择时间和人数</h1>
+        </header>
+
+        <nav class="bar bar-tab">
+            <a class="tab-item cost active" href="#">
+                <span class="tab-label">总额：<dfn>¥</dfn>5800</span>
+                <span class="tab-label">明细</span>
+            </a>
+
+            <a class="tab-item next" href="#">
+                <span class="tab-label">下一步</span>
+            </a>
+        </nav>
+
+        <div class="content content-padded">
+            <div class="calendar-tabs">
+                <div class="row">
+                    <div class="col-30">月份/批次</div>
+                    <div class="col-15">7月</div>
+                    <div class="col-15">8月</div>
+                    <div class="col-15">9月</div>
+                    <div class="col-15">10月</div>
+                </div>
+            </div>
+
+            <div id="J_calendar-content" class="calendar-content">
+
+            </div>
+
+            <div class="calendar-info">
+                <span>可报名</span>
+                <span>非节假日批次</span>
+            </div>
+
+            <div class="set_num">
+                <div class="fl person_num">出行人数</div>
+                <div class="number-chooser J_number-choose fl" data-min="1" data-max="50" data-default="2" data-step="1">
+                    <span class="operate-btn minus">-</span>
+                    <input type="tel" disabled="" class="number-input" name="tourSumDay" value="2" maxlength="3">
+                    <span class="operate-btn plus">+</span>
+                </div>
+                <div class="route_price_box fl">
+                    <span>成人价：</span>
+                    <span class="route_price">
+                        ¥580
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+<script src="scripts/config.js"></script>
+
+<!-- build:js scripts/body.js -->
+<script src="scripts/vendor/requirejs/require.js" data-main="scripts/application/pages/booking1"></script>
+<!-- endbuild -->
+</body>
+</html>

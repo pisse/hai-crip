@@ -22,7 +22,7 @@
 //|
 //'*/
 //require.config({
-require = {
+var require = {
 	//deps: ['application'],
 	waitSeconds: 45,
 	paths: {
@@ -31,7 +31,8 @@ require = {
 		handlebars: '../../vendor/handlebars/handlebars',
 		Templates: '../../application/templates/templates',
 	//	zepto: 'vendor/zepto/zepto',
-		swipe: '../../vendor/Swipe/swipe'
+		swipe: '../../vendor/Swipe/swipe',
+		mockjs: '../../vendor/mockjs/dist/mock',
 	},
 	shim: {
 		Templates: {
@@ -40,7 +41,9 @@ require = {
 	/*	zepto: {
 			exports: '$'
 		},*/
-	//	swipe:['zepto']
+		swipe:{
+			exports: 'Swipe'
+		}
 	}
 };
 //});

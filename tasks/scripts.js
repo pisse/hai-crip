@@ -85,24 +85,24 @@ gulp.task('coffees', ['coffeelint'], function() {
         .pipe($.plumber())
         .pipe($.coffee({ bare: true }).on('error', $.util.log))
         .pipe(gulp.dest(_.app + '/scripts'))
-        .pipe($.size()).pipe($.notify({
+        /*.pipe($.size()).pipe($.notify({
             message: '<%= options.date %> ✓ scripts: <%= file.relative %>',
             templateOptions: {
                 date: new Date()
             }
-        }));
+        }))*/;
 });
 
 //|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //| ✓ requirejs
 //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 gulp.task('requirejs', /*['coffees', 'jshint'],*/ function() {
-  $.requirejs({
+ /* $.requirejs({
         baseUrl: _.app + '/scripts',
         optimize: 'none',
-        include: ['requirejs', 'config'],
+        include: [ 'config'],
         mainConfigFile: _.app + '/scripts/config.js',
-        //out: 'body.js',
+        out: 'body.js',
         preserveLicenseComments: true,
         useStrict: true,
         wrap: true
@@ -113,20 +113,48 @@ gulp.task('requirejs', /*['coffees', 'jshint'],*/ function() {
         templateOptions: {
           date: new Date()
         }
-      }));
+      }));*/
+
+    return gulp.src([
+            _.app + '/scripts/application/pages/*.js'
+        ])
+        .pipe($.requirejsOptimize({
+            mainConfigFile: _.app + '/scripts/config.js',
+            optimize: 'none'
+        }))
+        .pipe($.rev())
+
+        .pipe(gulp.dest(_.dist + '/scripts'))
+        // write manifest
+        .pipe($.rev.manifest())
+
+        .pipe(gulp.dest(_.dist + '/scripts'));
+
 });
+
+/*
+* copy js
+* */
+gulp.task('copy-js', function() {
+    return gulp.src( [_.app + '/scripts/vendor/requirejs/require.js'])
+        .pipe(gulp.dest(_.dist + '/scripts/vendor/'));
+});
+
 
 //|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //| ✓ scripts
 //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-gulp.task('scripts', ['requirejs'], function() {
+gulp.task('scripts', ['requirejs','copy-js'], function() {
   return gulp.src([
     _.app + '/scripts/**/*.js',
     '!' + _.app + '/scripts/vendor/**/*.js'
-  ]).pipe($.plumber()).pipe($.size()).pipe($.notify({
-    message: '<%= options.date %> ✓ scripts: <%= file.relative %>',
-    templateOptions: {
-      date: new Date()
-    }
-  }));
+  ])
+      .pipe($.plumber())
+      .pipe($.size())
+      /*.pipe($.notify({
+            message: '<%= options.date %> ✓ scripts: <%= file.relative %>',
+            templateOptions: {
+              date: new Date()
+            }
+        }))*/;
 });

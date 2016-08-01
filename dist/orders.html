@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"><![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <title>gulp require</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/theme.css -->
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+
+    <!-- endbuild -->
+    <!-- build:js scripts/header.js -->
+    <!--<script src="scripts/vendor/modernizr/modernizr.js"></script>-->
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="page-group orders">
+    <div class="page current">
+
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/router">
+                <span class="icon icon-left"></span>
+            </a>
+            <h1 class="title">我的订单</h1>
+        </header>
+
+        <div class="content">
+
+            <div class="buttons-tab">
+                <a href="#all" class="tab-link active button">全部</a>
+                <a href="#waitPay" class="tab-link button">待付款</a>
+                <a href="#applySuccess" class="tab-link button">报名成功</a>
+                <a href="#substitution" class="tab-link button">替补</a>
+            </div>
+
+            <div class="tabs">
+                <div id="all" class="tab active">
+                    <div class="card">
+                        <div class="card-header">订单号：121232323 <span>待付款</span></div>
+                        <div class="card-content">
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">北京一日游</div>
+                                            </div>
+                                            <div class="item-subtitle">one night in Beijing</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>2015/01/15</span>
+                            <span><a href="">查看订单</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="waitPay" class="tab">
+                    <div class="card">
+                        <div class="card-header">订单号：121232323 <span>待付款</span></div>
+                        <div class="card-content">
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">北京一日游</div>
+                                            </div>
+                                            <div class="item-subtitle">one night in Beijing</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>2015/01/15</span>
+                            <span><a href="">查看订单</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="applySuccess" class="tab">
+                    <div class="card">
+                        <div class="card-header">订单号：121232323 <span>待付款</span></div>
+                        <div class="card-content">
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">北京一日游</div>
+                                            </div>
+                                            <div class="item-subtitle">one night in Beijing</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>2015/01/15</span>
+                            <span><a href="">查看订单</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="substitution" class="tab">
+                    <div class="card">
+                        <div class="card-header">订单号：121232323 <span>待付款</span></div>
+                        <div class="card-content">
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">北京一日游</div>
+                                            </div>
+                                            <div class="item-subtitle">one night in Beijing</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>2015/01/15</span>
+                            <span><a href="">查看订单</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</div>
+
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+<script src="scripts/config.js"></script>
+
+<!-- build:js scripts/body.js -->
+<script src="scripts/vendor/requirejs/require.js" data-main="scripts/application/pages/orders"></script>
+<!-- endbuild -->
+</body>
+</html>
