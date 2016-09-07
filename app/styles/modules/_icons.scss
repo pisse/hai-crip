@@ -22,17 +22,41 @@
 .icon-plus:before { content: "\e608"; }
 .icon-minus:before { content: "\e626"; }
 
+.icon-nav{
+  width: 1.2rem;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+}
+.icon-nav-home{
+  background-image: url("../../images/nav_home_n.png");
+}
+.active .icon-nav-home{
+  background-image: url("../../images/nav_home.png");
+}
 
+.icon-nav-custom{
+  background-image: url("../../images/nav_custom_n.png");
+}
+.active .icon-nav-custom{
+  background-image: url("../../images/nav_custom.png");
+}
+
+.icon-nav-mine{
+  background-image: url("../../images/nav_mine_n.png");
+}
+.active .icon-nav-mine{
+  background-image: url("../../images/nav_home.png");
+}
 
 
 .btn_link a{
   position: relative;
   display: block;
-  padding-left: 58px;
-  height: 59px;
-  line-height: 60px;
+  padding-left: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   text-align: left;
-  font-size: 15px;
+  font-size: 0.7rem;
   border-width: 0;
   border-bottom: 1px solid #eee;
  /* -webkit-border-image: url("../component/img/icon_border_half.png?v=20160712_15_35") 2 stretch;
@@ -41,60 +65,48 @@
   &::before{
     position: absolute;
     left: 16px;
-    top: 14px;
-    width: 32px;
-    height: 32px;
+    top: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
     /* background-size: 30px; */
     content: "";
+    margin-top: -0.6rem;
   }
 
   &.i-order::before{
     background: url("../../images/i-order.png") no-repeat top left;
-    background-size: 30px;
+    background-size: 1.2rem;
   }
   &.i-retail::before{
     background: url("../../images/i-retail.png") no-repeat top left;
-    background-size: 30px;
+    background-size: 1.2rem;
   }
   &.i-money::before{
     background: url("../../images/i-money.png") no-repeat top left;
-    background-size: 30px;
+    background-size: 1.2rem;
   }
   &.i-code::before{
     background: url("../../images/i-code.png") no-repeat top left;
-    background-size: 30px;
+    background-size: 1.2rem;
   }
   &.i-fav::before{
     background: url("../../images/i-fav.png") no-repeat top left;
-    background-size: 30px;
+    background-size: 1.2rem;
   }
   &.i-msg::before{
     background: url("../../images/i-msg.png") no-repeat top left;
-    background-size: 30px;
+    background-size: 1.2rem;
   }
   &.i-private::before{
     background: url("../../images/i-private.png") no-repeat top left;
-    background-size: 30px;
+    background-size:1.2rem;
   }
   &.i-setting::before{
     background: url("../../images/i-setting.png") no-repeat top left;
-    background-size: 30px;
+    background-size: 1.2rem;
   }
 
-  &::after{
-    position: absolute;
-    right: 15px;
-    top: 29px;
-    margin-top: -3.5px;
-    display: inline-block;
-    border-bottom: 2px solid #c0c0c0;
-    border-left: 2px solid #c0c0c0;
-    width: 7px;
-    height: 7px;
-    content: '';
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-  }
+  @include arrow-right();
 
   span{
     position: absolute;

@@ -1,0 +1,128 @@
+
+.help-block {
+	color:red;
+	margin-top:3px;
+}
+.no-result {
+	padding-left:5px;
+	line-height:34px;
+}
+
+/* 分页样式 */
+.pagination {
+    border-radius: 4px;
+    display: inline-block;
+    margin: 8px 0;
+    padding-left: 0;
+}
+.pagination > li {
+    display: inline;
+}
+.pagination > li > a, .pagination > li > span {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #428bca;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 4px 10px;
+    position: relative;
+    text-decoration: none;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #2a6496;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #428bca;
+    border-color: #428bca;
+    color: #fff;
+    cursor: default;
+    z-index: 2;
+}
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
+    background-color: #fff;
+    border-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+.pagination-lg > li > a, .pagination-lg > li > span {
+    font-size: 18px;
+    padding: 10px 16px;
+}
+.pagination-lg > li:first-child > a, .pagination-lg > li:first-child > span {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.pagination-lg > li:last-child > a, .pagination-lg > li:last-child > span {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.pagination-sm > li > a, .pagination-sm > li > span {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a, .pagination-sm > li:last-child > span {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/* 覆盖discuz的样式 */
+.nav li a { padding:5px 10px; }
+.floattop {
+    padding: 8px 20px 3px 0;
+}
+.floattopempty {
+    height: 0 !important;
+}
+.tb {
+    margin-top: 3px;
+}
+.tb td.td27 {
+    padding-bottom: 0 !important;
+	height:22px;
+}
+
+/* app图片配置页面样式 */
+.tb1 .img_td_label { font-weight: 700; padding: 3px 0 3px 5px; width: 100px; text-align: right}
+.tb1 .img_td_input { width: 150px; text-align: left;}
+.tb1 .img_op {width:25px;}
+.tb1 .conf_td_label { font-weight: 700; padding: 3px 0 3px 5px; width: 150px; text-align: right}
+.tb1 .conf_td_input { width: 150px; text-align: left;}
+
+/* 消息推送配置 */
+.msg_push_td_width_left { width:150px; }
+.msg_push_td_width_right { width:450px; }
+.msg_push_select_width { width:155px; }
+.msg_push_textarea { width:150px; height: 80px }
+.msg_push_input_text_width { width:150px; }
+
+.msg_push_list_table_header th {  width: 120px; font-weight: bold ;}
+
+/* intergration -> west-ten.php 文件样式 */ 
+div.west-ten-need{
+    border-top: 1px solid #DEEFFB;
+}
+.west-ten-need textarea{
+    width: 100%;
+    height: 400px;
+}
+.need_voucher{
+    cursor: pointer;
+}
+
+

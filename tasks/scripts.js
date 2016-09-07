@@ -122,13 +122,13 @@ gulp.task('requirejs', /*['coffees', 'jshint'],*/ function() {
             mainConfigFile: _.app + '/scripts/config.js',
             optimize: 'none'
         }))
-        .pipe($.rev())
+        //.pipe($.rev())
 
         .pipe(gulp.dest(_.dist + '/scripts'))
         // write manifest
-        .pipe($.rev.manifest())
+        //.pipe($.rev.manifest())
 
-        .pipe(gulp.dest(_.dist + '/scripts'));
+        //.pipe(gulp.dest(_.dist + '/scripts'));
 
 });
 

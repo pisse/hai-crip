@@ -71,6 +71,8 @@ var buildStyles = function(isBuild) {
 
           .pipe($.sourcemaps.init())
           .pipe($.sass(sassOptions).on('error', $.util.log))
+          .pipe($.replace("..\/..\/images\/","..\/images\/"))
+          .pipe($.replace("..\/..\/font\/","..\/font\/"))
           .pipe($.plumber())
           //.pipe($.autoprefixer())
           //.pipe($.cssnano())
@@ -88,6 +90,8 @@ var buildStyles = function(isBuild) {
             .pipe(wiredep(_.extend({}, conf.wiredep)))
 
             .pipe($.sass(sassOptions).on('error', $.util.log))
+            .pipe($.replace("..\/..\/images\/","..\/images\/"))
+            .pipe($.replace("..\/..\/font\/","..\/font\/"))
             .pipe($.plumber())
             //.pipe($.autoprefixer())
             .pipe($.cssnano())

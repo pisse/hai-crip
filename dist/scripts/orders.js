@@ -1,5 +1,5 @@
 /* global define */
-define('orders',[
+require([
 
 ], function () {
 	'use strict';
@@ -14,4 +14,6 @@ define('orders',[
 	});
 
 });
+
+define("orders", function(){});
 

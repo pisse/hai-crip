@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var fs = require('fs');
 
 var browserSync = require('browser-sync');
 var $ = require('gulp-load-plugins')();
@@ -21,16 +22,34 @@ gulp.task('markups', function() {
 });
 
 gulp.task('templates', function(){
-  gulp.src( path.join(conf.paths.src, '/scripts/**/*.hbs') )
-      .pipe($.handlebars())
-      .pipe($.wrap('Handlebars.template(<%= contents %>)'))
-      .pipe($.declare({
-        namespace: 'Templates',
-        noRedeclare: true, // Avoid duplicate declarations
-      }))
-      .pipe($.concat('templates.js'))
-      //.pipe($.emberEmblem())
-      //.pipe($.defineModule('amd'))
-      .pipe($.wrap('define(["handlebars"],function(Handlebars){<%= contents %> return this.Templates;})'))
-      .pipe(gulp.dest( path.join(conf.paths.src, 'scripts/application/templates/') ));
+
+    var tplpath = conf.paths.src + '/scripts/application/templates';
+    var tplList = fs.readdirSync(tplpath);
+
+    var Prefix = "Tpl_";
+
+    tplList.forEach(function (page){
+
+        var curpagePath = tplpath + "/" + page;
+        var states = fs.statSync(curpagePath);
+
+        if (states.isDirectory() === true) {
+            //console.log(curpagePath)
+
+            var fileName = Prefix + page;
+            gulp.src( path.join( curpagePath + '/**/*.hbs') )
+                .pipe($.handlebars())
+                .pipe($.wrap('Handlebars.template(<%= contents %>)'))
+                .pipe($.declare({
+                    namespace: fileName,
+                    noRedeclare: true, // Avoid duplicate declarations
+                }))
+                .pipe($.concat( fileName + '.js'))
+                //.pipe($.emberEmblem())
+                //.pipe($.defineModule('amd'))
+                .pipe($.wrap('define(["handlebars"],function(Handlebars){<%= contents %> return this.'+ fileName + ';})'))
+                .pipe(gulp.dest( path.join(conf.paths.src, 'scripts/application/templates/') ));
+        }
+    });
+
 });

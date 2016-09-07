@@ -45,6 +45,26 @@ define(['mockjs'], function(Mock){
                     "cutPrice": 600
                 }, "minPrice": 3439
             },
+        }),
+        activity_list: Mock.mock({
+            "code": 0,
+            "message": "success",
+            "data": {
+                "item|6": [{
+                    "title": "测试标题2",
+                    "subtitle": "小标题",
+                    "url": "测试活动连接3",
+                    "pic_url|1": ['http://qimg5.youxiake.com/app/201607/05/pager/4713f0dc3c323280739886a9c775453b.jpg!p6',
+                                    'http://qimg5.youxiake.com/app/201607/05/pager/ace38c5e0d6fa326628a31c691209962.jpg!p6',
+                                    'http://qimg5.youxiake.com/app/201607/14/pager/ba812bd7367c42783104826e6ceeb15d.jpg!p6',
+                                    'http://qimg5.youxiake.com/app/201606/14/pager/f71a605d21ab952cf72b10cc7601c97a.jpg!p6',
+                                    'http://qimg5.youxiake.com/app/201607/18/pager/f7072b920972bab999de04f0053f0910.jpg!p6',
+                                    'http://qimg5.youxiake.com/app/201607/18/pager/d113d5f3cda89a8901963e79af0fb4f3.jpg!p6'
+                    ],
+                    "sign_one": null,
+                    "sign_two": null
+                }]
+            }
         })
     };
 

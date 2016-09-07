@@ -1,5 +1,5 @@
 /* global define */
-define([
+require([
 
 ], function () {
 	'use strict';

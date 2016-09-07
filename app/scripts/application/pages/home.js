@@ -1,27 +1,38 @@
 /* global define */
-define([
+require([
+	'../../helpers/utils',
 	'../scope',
-	//'zepto',
-	'../views',
+	'../templates/Tpl_home',
 	'swipe'
-], function (scope, Views, swipe) {
+], function (utils, scope, Tplhome, swipe) {
 	'use strict';
 
-	var slider = Swipe(document.getElementById("slider"), {
-		auto: 3000,
-		continuous: true,
-		callback: function(pos) {
-			var i = bullets.length;
-			while (i--) {
-				bullets[i].className = " "
-			}
-			bullets[pos].className = "hover"
+	var utils = utils.utils;
+
+	utils.request({
+		url: "activity_list",
+		success: function(data){
+
+			$("#slider").html( Tplhome.banner(data['data']) );
+
+			var slider = Swipe(document.getElementById("slider"), {
+				auto: 3000,
+				continuous: true,
+				callback: function(pos) {
+					var i = bullets.length;
+					while (i--) {
+						bullets[i].className = " "
+					}
+					bullets[pos].className = "hover"
+				}
+			});
+			var bullets = document.getElementById("position").getElementsByTagName("li");
 		}
 	});
-	var bullets = document.getElementById("position").getElementsByTagName("li")
+
+
 
 	$(document).on('infinite', '.infinite-scroll-bottom',function() {
-		console.log(1)
 
 		// 如果正在加载，则退出
 		if (loading) return;
@@ -50,10 +61,6 @@ define([
 			$.refreshScroller();
 		}, 1000);
 	});
-
-	/*$(".content").scroller({
-		type: 'js'
-	});*/
 
 	return scope;
 });

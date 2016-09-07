@@ -198,19 +198,35 @@
 	//| ✓ images
 	//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 	gulp.task('images', function() {
-		gulp.src(_.app + '/*.{png,jpg,jpeg,gif,ico}').pipe(gulp.dest(_.dist));
+		//gulp.src(_.app + '/*.{png,jpg,jpeg,gif,ico}').pipe(gulp.dest(_.dist));
 		return gulp.src([
 			_.app + '/images/**/*.{png,jpg,jpeg,gif,ico}'
 		]).pipe($.plumber()).pipe($.cache($.imagemin({
 			optimizationLevel: 3,
 			progressive: true,
 			interlaced: true
-		}))).pipe(gulp.dest(_.dist + '/images')).pipe($.size()).pipe($.notify({
+		}))).pipe(gulp.dest(_.dist + '/images')).pipe($.size());
+
+		/*var spriteFile = 'test';
+		var spriteData = gulp.src( _.dist + '/images/!**!/!*.{png,jpg,jpeg,gif,ico}')
+			.pipe($.spritesmith({
+					imgName: spriteFile + '.png',
+					cssName: '_' + spriteFile + '.scss',
+					imgPath: '../img/sprite/' + spriteFile + '.png',
+					padding: 2
+				})
+			);
+
+		var imgStream = spriteData.img.pipe(gulp.dest(_.dist + '/img/sprite/'));
+		var cssStream = spriteData.css.pipe(gulp.dest(_.dist + '/scss/sprite/'));
+		return merge(imgStream, cssStream);*/
+
+		/*.pipe($.notify({
 			message: '<%= options.date %> ✓ images: <%= file.relative %>',
 			templateOptions: {
 				date: new Date()
 			}
-		}));
+		}));*/
 	});
 
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -238,6 +254,18 @@
 			}
 		}));
 	});*/
+
+	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	//| ✓ font
+	//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	gulp.task('font', function(){
+		return gulp.src([
+			_.app + '/font/*.*'
+		])
+			.pipe($.plumber())
+			.pipe(gulp.dest(_.dist + '/font'))
+	});
+
 
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//| ✓ bower (Inject Bower components)

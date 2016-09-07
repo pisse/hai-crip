@@ -11,14 +11,14 @@ var _ = conf.paths;
 //|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //| ✓ html
 //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-gulp.task('html', /*["styles-build", "scripts-build"], */function() {
+gulp.task('html', ["styles-build", "scripts"], function() {
 
     var useref = require('gulp-useref');
     var assets = useref.assets();
 
     var js = $.filter('**/*.js', {restore:true}), css = $.filter('**/*.css',{restore:true});
     gulp.src(_.app + '/*.txt').pipe(gulp.dest(_.dist));
-    return gulp.src([_.dist + '/*.html',
+    return gulp.src([_.app + '/*.html',
             _.dist + '/scripts/*.json',
         '!' + _.app + '/demo.html'])
         .pipe($.plumber())
@@ -50,7 +50,8 @@ gulp.task('html', /*["styles-build", "scripts-build"], */function() {
                 '<script src="%s/%f.js"></script>'
             }
         }))
-        .pipe($.revCollector({
+            //
+      /*  .pipe($.revCollector({
             replaceReved: true,
             dirReplacements: {
                 // 'css': '/dist/css',
@@ -59,8 +60,8 @@ gulp.task('html', /*["styles-build", "scripts-build"], */function() {
                     return '//cdn' + (Math.floor(Math.random() * 9) + 1) + '.' + 'exsample.dot' + '/img/' + manifest_value;
                 }
             }
-        }) )
-        .pipe(gulp.dest(_.dist+"/test"))
+        }) )*/
+        .pipe(gulp.dest(_.dist))
         .pipe($.size())
         /*.pipe($.notify({
             message: '<%= options.date %> ✓ html: <%= file.relative %>',
@@ -75,7 +76,7 @@ gulp.task('html', /*["styles-build", "scripts-build"], */function() {
 //| ✓ alias
 //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 gulp.task('test', ['jsonlint', 'coffeelint', 'jshint', 'mocha']);
-gulp.task('build', [ 'html', 'images', 'svg']);
+gulp.task('build', [ 'html', 'images'/*, 'svg'*/, 'font']);
 
 
 //|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

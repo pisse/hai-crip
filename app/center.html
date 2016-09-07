@@ -16,15 +16,14 @@
     <meta name="description" content="">
     <title>gulp require</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css styles/theme.css -->
 
     <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
     <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
 
+    <!-- build:css -->
     <link rel="stylesheet" href="styles/theme.css">
-
-
     <!-- endbuild -->
+
     <!-- build:js scripts/header.js -->
     <!--<script src="scripts/vendor/modernizr/modernizr.js"></script>-->
     <!-- endbuild -->
@@ -49,16 +48,16 @@
         </header>
 
         <nav class="bar bar-tab">
-            <a class="tab-item external active" href="#">
-                <span class="icon icon-home"></span>
+            <a class="tab-item external " href="./home.html">
+                <span class="icon icon-nav icon-nav-home"></span>
                 <span class="tab-label">首页</span>
             </a>
-            <a class="tab-item external" href="#">
-                <span class="icon icon-star"></span>
+            <a class="tab-item external" href="./custom.html">
+                <span class="icon icon-nav icon-nav-custom"></span>
                 <span class="tab-label">定制</span>
             </a>
-            <a class="tab-item external" href="#">
-                <span class="icon icon-settings"></span>
+            <a class="tab-item external active" href="./center.html">
+                <span class="icon icon-nav icon-nav-mine cur"></span>
                 <span class="tab-label">我的</span>
             </a>
         </nav>
@@ -118,9 +117,9 @@
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
 
-<script src="scripts/config.js"></script>
 
-<!-- build:js scripts/body.js -->
+<!-- build:js -->
+<script src="scripts/config.js"></script>
 <script src="scripts/vendor/requirejs/require.js" data-main="scripts/application/pages/center"></script>
 <!-- endbuild -->
 </body>

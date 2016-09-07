@@ -1,5 +1,5 @@
 /* global define */
-define([
+require([
 	'../scope',
 	//'zepto',
 	'../views',

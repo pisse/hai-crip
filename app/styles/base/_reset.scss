@@ -25,6 +25,9 @@ h1,h2,h3,h4,h5,h6{
 * sm reset
 */
 
+.bar-tab::before{
+  background-color: #018ffd;
+}
 .bar-nav{
   background-color: #008cff;
 }

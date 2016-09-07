@@ -1,5 +1,5 @@
 /* global define */
-define('profile',[
+require([
 
 ], function () {
 	'use strict';
@@ -18,4 +18,6 @@ define('profile',[
 	});
 
 });
+
+define("profile", function(){});
 

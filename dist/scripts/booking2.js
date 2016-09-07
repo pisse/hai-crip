@@ -1,9 +1,11 @@
 /* global define */
-define('booking2',[
+require([
 ], function (Template) {
 	'use strict';
 
 
 	//return scope;
 });
+
+define("booking2", function(){});
 

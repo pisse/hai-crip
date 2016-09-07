@@ -29,15 +29,15 @@ var require = {
 		requirejs: '../../vendor/requirejs/require',
 		sizzle: '../../vendor/sizzle/dist/sizzle',
 		handlebars: '../../vendor/handlebars/handlebars',
-		Templates: '../../application/templates/templates',
+	//	Templates: '../../application/templates/templates',
 	//	zepto: 'vendor/zepto/zepto',
 		swipe: '../../vendor/Swipe/swipe',
 		mockjs: '../../vendor/mockjs/dist/mock',
 	},
 	shim: {
-		Templates: {
+		/*Templates: {
 			exports: 'Templates'
-		},
+		},*/
 	/*	zepto: {
 			exports: '$'
 		},*/

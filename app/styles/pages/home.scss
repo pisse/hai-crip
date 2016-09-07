@@ -1,11 +1,4 @@
 .home{
-  .page, .page-group{
-    /* background: #fff;*/
-  }
-
-  .bar-tab::before{
-    background-color: #018ffd;
-  }
 
   /*
   * =========================================
@@ -18,20 +11,18 @@
     background-color: inherit;
   }
 
-  .bar .searchbar .search-input input{
-    border:1px solid #fff;
-  }
-
   .search-input label+input{
     padding-left: 0.8rem;
   }
   .searchbar .searchbar-cancel {
-    color: #fff
+    color: #fff;
+    font-size: 0.65rem;
   }
   .search-input input{
     background-color:inherit;
     border-radius: .8rem;
     color: #fff;
+    border:1px solid #fff;
 
     @include placeholder {
       color: #fff;
@@ -41,6 +32,15 @@
     left: inherit;
     right: 0.3rem;
     color: #fff;
+  }
+
+  .content-padded{
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
   }
 
   /*
@@ -75,31 +75,6 @@
 
   .categoryList .categoryImg img {
     width: 100%;
-    height: auto
-  }
-
-  .categoryList .categoryImg.img1 {
-    background-image: url(../images/icon-1.png)
-  }
-
-  .categoryList .categoryImg.img2 {
-    background-image: url(../images/icon-2.png)
-  }
-
-  .categoryList .categoryImg.img3 {
-    background-image: url(../images/icon-3.png)
-  }
-
-  .categoryList .categoryImg.img4 {
-    background-image: url(../images/icon-4.png)
-  }
-
-  .categoryList .categoryImg.img5 {
-    background-image: url(../images/icon-5.png)
-  }
-
-  .categoryList .categoryImg.img6 {
-    background-image: url(../images/icon-6.png)
   }
 
   /*
@@ -113,6 +88,7 @@
     .bournData{
       li{
         padding: 0.3rem 0.5rem;
+        position: relative;
       }
 
       .bournImg{
@@ -120,15 +96,14 @@
         margin-top: 5px;
 
         img{
-          position: relative;
-          z-index: 10;
+          z-index: 5;
           width: 100%;
-          display: block;
+          height: 100%;
         }
       }
       .bournText{
         color: #4e4e4e;
-        font-size: 14px;
+        font-size: 0.65rem;
 
         p{
           margin: 2px;
@@ -136,18 +111,69 @@
       }
 
       .bournDes{
-        font-size: 12px;
+        font-size: 0.6rem;
         color: #bbb;
       }
+    }
 
-      .ziyou{
+    .status{
+      color:#fff;
+      padding: 0 3px;
+      font-size: 0.6rem;
+      position: relative;
 
-      }
-      .shendu{
-
+      &::after{
+        content:"";
+        display: block;
+        position: absolute;
+        right: -4px;
+        top:50%;
+        margin-top: -4px;
       }
     }
+    .status.ziyou{
+      background-color: #287aeb;
+      &::after{
+        @include triangle(8px, #287aeb, right);
+      }
+    }
+    .status.shendu{
+      background-color: #ac32b4;
+
+      &::after{
+        @include triangle(8px, #ac32b4, right);
+      }
+    }
+
+    .bournPrice{
+      position: absolute;
+      bottom: 100px;
+      right: 1rem;
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      text-align: center;
+      font-size: 0.65rem;
+      padding-top: 20px;
+      color: #fff;
+
+      p{
+        margin: 0;
+        height: 40px;
+        border-top: 1px solid #fff;
+        font-size: 0.5rem;
+      }
+
+      &.ziyou{
+        background-color: #287aeb;
+      }
+
+      &.shendu{
+        background-color: #ac32b4;
+      }
+
+    }
+
+
   }
-
-
 }
